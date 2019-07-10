@@ -1,0 +1,31 @@
+﻿@model DojoSurveyIII.Models.MyModel
+<form asp-action="Result" asp-controller="Home" method="post">
+    <span style="color: red;" asp-validation-for="Name"></span><br>
+    <label asp-for="Name"></label>
+    <input asp-for="Name"><br>
+    
+    <span style="color: red;"  asp-validation-for="Location"></span><br>
+    <label asp-for="Location"></label>
+        <select name="Location">
+        <option asp-value="Chicago">Chicago</option>
+        <option asp-value="Seattle">Seattle</option>
+        <option asp-value="Los Angles">Los Angles</option>
+        <option asp-value="Austin">Austin</option>
+        </select><br>
+
+    <span style="color: red;" asp-validation-for="FavoriteLanguage"></span><br>
+    <label asp-for="FavoriteLanguage"></label>
+        <select name="FavoriteLanguage">
+        <option asp-value="C#">C#</option>
+        
+        <option asp-value="Python">Python</option>
+        <option asp-value="Javascript">Javascript</option>
+        <option asp-value="Go">Go</option>
+        </select><br>
+
+    <span style="color: red;" asp-validation-for="Comment"></span><br>
+    <label asp-for="Comment"></label>
+        <textarea name="comment" placeholder="Enter text here"></textarea>
+
+    <button type="submit">Submit</button>
+</form>
